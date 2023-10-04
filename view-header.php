@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="appointments.php">Appointments</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="docters-with-procedures.php">Doctors with Procedures</a>
+        </li>
       </ul>
       </form>
     </div>
