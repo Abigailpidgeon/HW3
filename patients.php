@@ -4,7 +4,7 @@ require_once("model-patients.php");
 
 $pageTitle = "Patients";
 include "view-header.php";
-$doctors = selectPatients();
+$patients = selectPatients();
 include "veiw-patients.php";
 include "view-footer.php";
 ?>
