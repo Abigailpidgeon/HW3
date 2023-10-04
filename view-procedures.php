@@ -20,7 +20,7 @@ while ($procedure = $procedures->fetch_assoc())
   <td>
     <form method = "post" action = "appointments-by-procedure.php">
       <input type="hidden" name="pid" value="<?php echo $course['course_id']; ?>">
-      button type ="submit" class="btn btn-primary"?Appointment</button>
+      button type ="submit" class="btn btn-primary">Appointment</button>
     </form>
   </td>
   </tr>
