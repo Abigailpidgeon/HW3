@@ -9,6 +9,7 @@ while ($doctor = $doctors->fetch_assoc())
       <h5 class="card-title"><?php echo $doctor['doctor_name']; ?></h5>
         <p class="card-text">
   <?php
+  $courses = selectProceduresbyDoctor
 }
 ?>
         </p>
