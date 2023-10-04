@@ -10,7 +10,7 @@
     </thead>
   </body>
   <?php 
-while ($procedure = $procedures->fetchassoc())
+while ($procedure = $procedures->fetch_assoc())
 {
   ?>
   <tr>
