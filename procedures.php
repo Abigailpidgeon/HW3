@@ -3,8 +3,8 @@ require_once("util-db.php");
 require_once("model-procedures.php");
 
 $pageTitle = "Procedures";
-include "veiw-header.php";
+include "view-header.php";
 $procedures = selectProcedures();
-include "veiw-procedures.php";
-include "veiw-footer.php";
+include "view-procedures.php";
+include "view-footer.php";
 ?>
