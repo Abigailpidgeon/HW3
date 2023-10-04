@@ -1,20 +1,24 @@
 <h1>Doctors</h1>
 <div class="table-responsive">
   <table class="table">
-    <tr>
+    <thead>
+       <tr>
       <th>ID</th>
     <th>Name</th>
     <th>Clinic</th>
+         <th></th>
     </tr>
-  </table>
+    </thead>
+  </tbody>
   <?php 
-while ($doctor = $doctors->fetchassoc())
+while ($doctor = $doctors->fetch_assoc())
 {
   ?>
   <tr>
     <td><?php echo $doctor['doctor_id']; ?></td>
     <td><?php echo $doctor['doctor_name']; ?></td>
     <td><?php echo $doctor['clinic_name']; ?></td>
+  <td><a href="procedures-by-doctor.php?id=<?php echo $doctor['doctor_id']; ?>">Procedures</a></td>
   </tr>
   <?php
 }
