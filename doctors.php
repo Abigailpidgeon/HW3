@@ -5,6 +5,6 @@ require_once("model-doctors.php");
 $pageTitle = "Doctors";
 include "view-header.php";
 $doctors = selectDoctors();
-include "veiw-doctors.php";
+include "view-doctors.php";
 include "view-footer.php";
 ?>
