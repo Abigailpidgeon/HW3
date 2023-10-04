@@ -19,7 +19,7 @@ while ($procedure = $procedures->fetch_assoc())
     <td><?php echo $procedure['procedure_desc']; ?></td>
   <td>
     <form method = "post" action = "appointments-by-procedure.php">
-      <input type="hidden" name="pid" value="<?php echo $course['course_id']; ?>">
+      <input type="hidden" name="pid" value="<?php echo $procedure['procedure_id']; ?>">
       <button type ="submit" class="btn btn-primary">Appointment</button>
     </form>
   </td>
