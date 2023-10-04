@@ -4,7 +4,7 @@ require_once("model-appointments.php");
 
 $pageTitle = "Appointments";
 include "view-header.php";
-$doctors = selectAppointments();
+$appointments = selectAppointments();
 include "veiw-appointments.php";
 include "view-footer.php";
 ?>
