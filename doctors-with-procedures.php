@@ -4,7 +4,7 @@ require_once("model-doctors-with-procedures.php");
 
 $pageTitle = "Doctors with Procedure";
 include "veiw-header.php";
-$courses = selectDoctors();
+$doctors = selectDoctors();
 include "veiw-doctors-with-procedures.php";
 include "veiw-footer.php";
 ?>
