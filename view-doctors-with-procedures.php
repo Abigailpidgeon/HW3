@@ -12,8 +12,8 @@ while ($doctor = $doctors->fetch_assoc())
 $procedures = selectProceduresbyDoctor($doctor['doctor_id']);
   while ($procedure = $procedures->fetch_assoc()) {
     ?>
-    <li class = "list-group-item"><?php echo $procedure['procedure_id']; ?> - <?php echo $procedure['procedure_name']; ?> - <?php echo $procedure['procedure_desc']; ?> - <?php echo $procedure['room']; ?> - <?php echo $procedure['day_time']; ?>
-<?php
+    <li class = "list-group-item"><?php echo $procedure['procedure_id']; ?> - <?php echo $procedure['procedure_name']; ?> - <?php echo $procedure['procedure_desc']; ?> - <?php echo $procedure['room']; ?> - <?php echo $procedure['day_time']; ?></li>
+    <?php
   }
   ?>
     </ul>
