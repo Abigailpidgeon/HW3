@@ -15,7 +15,7 @@ function selectProcedures() {
 function insertProcedures($pName, $pDesc) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `procedure` (`procedure_name`, `procedure_desc`) VALUES (?,?)";
+        $stmt = $conn->prepare("INSERT INTO `procedure` (`procedure_name`, `procedure_desc`) VALUES (?,?)");
         $stmt->bind_param("ss",$pName, $pDesc);
         $success = $stmt->execute();
         $conn->close();
