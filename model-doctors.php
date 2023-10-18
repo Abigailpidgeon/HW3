@@ -12,4 +12,44 @@ function selectDoctors() {
         throw $e;
     }
 }
+function insertDoctors($dName, $cName) {
+   try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare(INSERT INTO `doctor` (`doctor_name`, `clinic_name`) VALUES (?,?);
+        $stmt->bind_param("ss",$dName, $cName);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function updateDoctors($dName, $cName, $did) {
+   try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `doctor` set `doctor_name` = ?, `clinic_name` = ?, where doctor_id = ?");
+        $stmt->bind_param("ssi",$pName, $cName, $did);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+}
+function deleteDoctors($did) {
+   try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from doctor where doctor_id = ?");
+        $stmt->bind_param("i", $did);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
