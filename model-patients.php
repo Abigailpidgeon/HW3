@@ -15,7 +15,7 @@ function selectPatients() {
 function insertPatients($patname, $inname) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare(INSERT INTO `patient` (`patient_name`, `insurance_name`) VALUES (?,?);
+        $stmt = $conn->prepare("INSERT INTO `patient` (`patient_name`, `insurance_name`) VALUES (?,?)");
         $stmt->bind_param("ss",$patname, $inname);
         $success = $stmt->execute();
         $conn->close();
@@ -24,7 +24,8 @@ function insertPatients($patname, $inname) {
         $conn->close();
         throw $e;
     }
-}function updatePatients($patname, $inname, $patid) {
+}
+function updatePatients($patname, $inname, $patid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `patient` set `patient_name` = ?, `insurance_name` = ?, where patient_id = ?");
@@ -37,7 +38,7 @@ function insertPatients($patname, $inname) {
         throw $e;
     }
 }
-}function deletePatients($patid) {
+function deletePatients($patid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from patient where patient_id = ?");
