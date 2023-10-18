@@ -15,7 +15,7 @@ function selectDoctors() {
 function insertDoctors($dName, $cName) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare(INSERT INTO `doctor` (`doctor_name`, `clinic_name`) VALUES (?,?);
+        $stmt = $conn->prepare("INSERT INTO `doctor` (`doctor_name`, `clinic_name`) VALUES (?,?)");
         $stmt->bind_param("ss",$dName, $cName);
         $success = $stmt->execute();
         $conn->close();
@@ -37,7 +37,6 @@ function updateDoctors($dName, $cName, $did) {
         $conn->close();
         throw $e;
     }
-}
 }
 function deleteDoctors($did) {
    try {
