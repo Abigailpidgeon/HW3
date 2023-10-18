@@ -24,7 +24,8 @@ function insertProcedures($pName, $pDesc) {
         $conn->close();
         throw $e;
     }
-}function updateProcedures($pName, $pDesc, $pid) {
+}
+function updateProcedures($pName, $pDesc, $pid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `procedure` set `procedure_name` = ?, `procedure_desc` = ?, where procedure_id = ?");
@@ -37,7 +38,8 @@ function insertProcedures($pName, $pDesc) {
         throw $e;
     }
 }
-}function deleteProcedures($pid) {
+}
+function deleteProcedures($pid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from procedure where procedure_id = ?");
