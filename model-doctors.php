@@ -12,11 +12,11 @@ function selectDoctors() {
         throw $e;
     }
 }
-function insertDoctors($dName, $cName) {
+function insertDoctors($dName, $dcName) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `doctor` (`doctor_name`, `clinic_name`) VALUES (?,?)");
-        $stmt->bind_param("ss",$dName, $cName);
+        $stmt->bind_param("ss",$dName, $dcName);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -25,11 +25,11 @@ function insertDoctors($dName, $cName) {
         throw $e;
     }
 }
-function updateDoctors($dName, $cName, $did) {
+function updateDoctors($dName, $dcName, $did) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `doctor` set `doctor_name` = ?, `clinic_name` = ?, where doctor_id = ?");
-        $stmt->bind_param("ssi",$pName, $cName, $did);
+        $stmt->bind_param("ssi",$pName, $dcName, $did);
         $success = $stmt->execute();
         $conn->close();
         return $success;
