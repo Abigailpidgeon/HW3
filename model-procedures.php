@@ -38,7 +38,6 @@ function updateProcedures($pName, $pDesc, $pid) {
         throw $e;
     }
 }
-}
 function deleteProcedures($pid) {
    try {
         $conn = get_db_connection();
