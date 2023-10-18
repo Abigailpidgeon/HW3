@@ -15,7 +15,7 @@ function selectAppointments() {
 function insertAppointments($aroom, $adaytime) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare(INSERT INTO `appointment` (`room`, `day_time`) VALUES (?,?);
+        $stmt = $conn->prepare("INSERT INTO `appointment` (`room`, `day_time`) VALUES (?,?)");
         $stmt->bind_param("ss",$aroom, $adaytime);
         $success = $stmt->execute();
         $conn->close();
@@ -24,7 +24,7 @@ function insertAppointments($aroom, $adaytime) {
         $conn->close();
         throw $e;
     }
-}function updateAppointments($aroom, $adaytime, $aid) {
+function updateAppointments($aroom, $adaytime, $aid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `appointment` set `room` = ?, `day_time` = ?, where appointment_id = ?");
@@ -37,7 +37,7 @@ function insertAppointments($aroom, $adaytime) {
         throw $e;
     }
 }
-}function deleteAppointments($aid) {
+function deleteAppointments($aid) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from appointment where appointment_id = ?");
