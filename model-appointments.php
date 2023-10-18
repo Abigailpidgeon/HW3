@@ -24,6 +24,7 @@ function insertAppointments($aroom, $adaytime) {
         $conn->close();
         throw $e;
     }
+}
 function updateAppointments($aroom, $adaytime, $aid) {
    try {
         $conn = get_db_connection();
