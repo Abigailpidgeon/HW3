@@ -8,7 +8,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
 switch ($_POST['actionType']){
   case "Add":
-    insertProcedures($_POST['pName'],$_POST['pDesc']);
+    if (insertProcedures($_POST['pName'],$_POST['pDesc'])){
+      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>"';
+        }else{
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>"';
+        }
   break;
 }
 }
