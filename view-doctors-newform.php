@@ -24,7 +24,7 @@
       <label for="dcName" class="form-label">Clinic name</label>
       <input type="text" class="form-control" id="dcName" name = "dcName">
     </div>
-   <input type = "hidden" name+"actionType" value="Add">
+   <input type = "hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
       </div>
