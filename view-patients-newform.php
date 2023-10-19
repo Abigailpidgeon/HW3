@@ -24,6 +24,7 @@
       <label for="pinname" class="form-label">Insurance </label>
       <input type="text" class="form-control" id="pinname" name = "pinname">
     </div>
+   <input type = "hidden" name+"actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
       </div>
