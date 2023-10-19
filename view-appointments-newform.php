@@ -24,6 +24,7 @@
       <label for="adaytime" class="form-label">Appointment date and time</label>
       <input type="datetime-local" class="form-control" id="adaytime" name = "adaytime">
     </div>
+   <input type = "hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
       </div>
