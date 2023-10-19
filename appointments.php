@@ -9,9 +9,9 @@ if (isset($_POST['actionType'])){
 switch ($_POST['actionType']){
   case "Add":
    if (insertProcedures($_POST['aroom'],$_POST['adaytime'])){
-      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>"';
+      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>';
         }else{
-     echo  '<div class="alert alert-danger" role="alert">Error....</div>"';
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
   break;
 }
