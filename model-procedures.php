@@ -41,7 +41,7 @@ function updateProcedures($pName, $pDesc, $pid) {
 function deleteProcedures($pid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from procedure where procedure_id = ?");
+        $stmt = $conn->prepare("delete from `procedure` where procedure_id = ?");
         $stmt->bind_param("i", $pid);
         $success = $stmt->execute();
         $conn->close();
