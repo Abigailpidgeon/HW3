@@ -41,7 +41,7 @@ function updateDoctors($dName, $dcName, $did) {
 function deleteDoctors($did) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from doctor where doctor_id = ?");
+        $stmt = $conn->prepare("delete from `doctor` where doctor_id = ?");
         $stmt->bind_param("i", $did);
         $success = $stmt->execute();
         $conn->close();
