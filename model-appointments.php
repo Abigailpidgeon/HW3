@@ -41,7 +41,7 @@ function updateAppointments($aroom, $adaytime, $aid) {
 function deleteAppointments($aid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from appointment where appointment_id = ?");
+        $stmt = $conn->prepare("delete from `appointment` where appointment_id = ?");
         $stmt->bind_param("i", $aid);
         $success = $stmt->execute();
         $conn->close();
