@@ -41,7 +41,7 @@ function updatePatients($ppatname, $pinname, $ppatid) {
 function deletePatients($ppatid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from patient where patient_id = ?");
+        $stmt = $conn->prepare("delete from `patient` where patient_id = ?");
         $stmt->bind_param("i", $ppatid);
         $success = $stmt->execute();
         $conn->close();
