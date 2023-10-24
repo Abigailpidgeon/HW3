@@ -16,7 +16,7 @@ switch ($_POST['actionType']){
   break;
    case "Edit":
     if (updateProcedures($_POST['pName'],$_POST['pDesc'],$_POST['pid'])){
-      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>';
+      echo '<div class="alert alert-success" role="alert"> Procedure updated!</div>';
         }else{
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
