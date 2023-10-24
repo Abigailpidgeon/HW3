@@ -9,14 +9,21 @@ if (isset($_POST['actionType'])){
 switch ($_POST['actionType']){
   case "Add":
    if (insertAppointments($_POST['aroom'],$_POST['adaytime'])){
-      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>';
+      echo '<div class="alert alert-success" role="alert"> Appointment added!</div>';
+        }else{
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>';
+        }
+  break;
+  case "Edit":
+   if (updateAppointments($_POST['aroom'],$_POST['adaytime'],$_POST['aid'])){
+      echo '<div class="alert alert-success" role="alert"> Appointment updated!</div>';
         }else{
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
   break;
   case "Delete":
     if (deleteAppoointments($_POST['aid'])){
-      echo '<div class="alert alert-success" role="alert"> Procedure deleted!</div>';
+      echo '<div class="alert alert-success" role="alert">Appointment deleted!</div>';
         }else{
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
