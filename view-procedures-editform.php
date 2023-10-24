@@ -22,7 +22,7 @@
     </div>
     <div class="mb-3">
       <label for="pDesc<?php echo $procedure['procedure_id']; ?>" class="form-label">Procedure description</label>
-      <input type="text" class="form-control" id="pDesc<?php echo $procedure['procedure_id']; ?>" name = "pName" value="<?php echo $procedure['procedure_description']; ?>">
+      <input type="text" class="form-control" id="pDesc<?php echo $procedure['procedure_id']; ?>" name = "pdesc" value="<?php echo $procedure['procedure_description']; ?>">
     </div>
    <input type = "hidden" name="pid" value="<?php echo $procedure['procedure_id']; ?>">
     <input type = "hidden" name="actionType" value="Edit">
