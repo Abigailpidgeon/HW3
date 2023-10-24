@@ -14,6 +14,13 @@ switch ($_POST['actionType']){
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
   break;
+  case "Edit":
+    if (insertPatients($_POST['ppatname'],$_POST['pinname'],$_POST['ppatid'])){
+      echo '<div class="alert alert-success" role="alert"> Patient added!</div>';
+        }else{
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>';
+        }
+  break;
    case "Delete":
     if (deletePatients($_POST['ppatid'])){
       echo '<div class="alert alert-success" role="alert"> Patient deleted!</div>';
