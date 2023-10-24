@@ -23,7 +23,8 @@
     <div class="mb-3">
       <label for="pinname<?php echo $patient['patient_id']; ?>" class="form-label">Patient insurance</label>
       <input type="text" class="form-control" id="pinname<?php echo $patient['patient_id']; ?>" name = "pinname" value="<?php echo $patient['insurance_name']; ?>">
-   <input type = "hidden" name="ppatid" value="<?php echo $patient['patient_id']; ?>">
+    </div>
+     <input type = "hidden" name="ppatid" value="<?php echo $patient['patient_id']; ?>">
     <input type = "hidden" name="actionType" value="Edit">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
