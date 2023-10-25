@@ -15,9 +15,9 @@
       <th>ID</th>
     <th>Name</th>
     <th>Insurance</th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th></th>
+          <th></th>
+          <th></th>
     </tr>
     </thead>
   <tbody>
