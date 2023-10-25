@@ -12,11 +12,11 @@ function selectAppointments() {
         throw $e;
     }
 }
-function insertAppointments($aroom, $adaytime) {
+function insertAppointments($did,$pid,$ppatid,$aroom,$adaytime) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `appointment` (`room`, `day_time`) VALUES (?,?)");
-        $stmt->bind_param("ss",$aroom, $adaytime);
+        $stmt = $conn->prepare("INSERT INTO `appointment` (`did`,`pid`,`ppatid`,`room`, `day_time`) VALUES (?,?,?,?,?)");
+        $stmt->bind_param("ss",$did,$pid,$ppatid,$aroom,$adaytime);
         $success = $stmt->execute();
         $conn->close();
         return $success;
