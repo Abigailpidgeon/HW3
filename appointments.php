@@ -22,7 +22,7 @@ switch ($_POST['actionType']){
         }
   break;
   case "Delete":
-    if (deleteAppoointments($_POST['aid'])){
+    if (deleteAppointments($_POST['aid'])){
       echo '<div class="alert alert-success" role="alert">Appointment deleted!</div>';
         }else{
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
