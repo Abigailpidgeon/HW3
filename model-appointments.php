@@ -15,7 +15,7 @@ function selectAppointments() {
 function insertAppointments($did,$pid,$ppatid,$aroom,$adaytime) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `appointment` (`did`,`pid`,`ppatid`,`room`, `day_time`) VALUES (?,?,?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO `appointment` (`doctor_id`,`procedure_id`,`patient_id`,`room`, `day_time`) VALUES (?,?,?,?,?)");
         $stmt->bind_param("iiiss",$did,$pid,$ppatid,$aroom,$adaytime);
         $success = $stmt->execute();
         $conn->close();
