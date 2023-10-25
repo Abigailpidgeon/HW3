@@ -30,6 +30,7 @@ while ($doctor = $doctors->fetch_assoc())
     <td><?php echo $doctor['doctor_name']; ?></td>
     <td><?php echo $doctor['clinic_name']; ?></td>
   <td><a href="procedures-by-doctor.php?id=<?php echo $doctor['doctor_id']; ?>">Procedures</a></td>
+    <td>
   <?php
     include "view-doctors-editform.php";
   ?>
