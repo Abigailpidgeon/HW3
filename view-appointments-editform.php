@@ -18,11 +18,11 @@
   <form method = "post" action="">
     <div class="mb-3">
       <label for="aroom<?php echo $appointment['appointment_id']; ?>" class="form-label">Appointment room</label>
-      <input type="text" class="form-control" id="aroom<?php echo $appointment['appointment_id']; ?>" name ="aroom" value="<?php echo $appointment['appointment_room']; ?>">
+      <input type="text" class="form-control" id="aroom<?php echo $appointment['appointment_id']; ?>" name ="aroom" value="<?php echo $appointment['room']; ?>">
     </div>
     <div class="mb-3">
       <label for="adaytime<?php echo $appointment['appointment_id']; ?>" class="form-label">Appointment date and time</label>
-     <input type="text" class="form-control" id="adaytime<?php echo $appointment['appointment_id']; ?>" name = "adaytime" value="<?php echo $appointment['appointment_adaytime']; ?>">
+     <input type="text" class="form-control" id="adaytime<?php echo $appointment['appointment_id']; ?>" name = "adaytime" value="<?php echo $appointment['day_time']; ?>">
    </div>
       <input type = "hidden" name="aid" value="<?php echo $appointment['appointment_id']; ?>">
     <input type = "hidden" name="actionType" value="Edit">
