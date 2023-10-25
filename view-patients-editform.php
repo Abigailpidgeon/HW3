@@ -18,7 +18,7 @@
   <form method = "post" action="">
     <div class="mb-3">
       <label for="ppatName<?php echo $patient['patient_id']; ?>" class="form-label">Patient name</label>
-      <input type="text" class="form-control" id="ppatName<?php echo $patient['patient_id']; ?>" name ="ppatName" value="<?php echo $patient['patient_name']; ?>">
+      <input type="text" class="form-control" id="ppatName<?php echo $patient['patient_id']; ?>" name ="ppatname" value="<?php echo $patient['patient_name']; ?>">
     </div>
     <div class="mb-3">
       <label for="pinname<?php echo $patient['patient_id']; ?>" class="form-label">Patient insurance</label>
