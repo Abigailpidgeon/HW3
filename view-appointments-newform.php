@@ -19,6 +19,10 @@
    <div class="mb-3">
       <label for="did" class="form-label">Doctor ID</label>
       <input type="text" class="form-control" id="did" name = "did">
+   <?php
+$doctorlist = selectDoctorsForInput();
+include "view-doctor-input-list.php";
+?>
     </div>
    <div class="mb-3">
       <label for="pid" class="form-label">Procedure ID</label>
