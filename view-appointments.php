@@ -20,7 +20,7 @@
          <th></th>
          </tr>
     </thead>
-  </tbody>
+  <tbody>
   <?php 
 while ($appointment = $appointments->fetch_assoc())
 {
@@ -31,7 +31,7 @@ while ($appointment = $appointments->fetch_assoc())
     <td><?php echo $appointment['day_time']; ?></td>
   <td>
      <?php
-    include "view-procedures-editform.php";
+    include "view-appointments-editform.php";
   ?>
     </td>
     <td>
