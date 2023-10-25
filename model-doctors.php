@@ -28,7 +28,7 @@ function insertDoctors($dName, $dcName) {
 function updateDoctors($dName, $dcName, $did) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `doctor` set `doctor_name` = ?, `clinic_name` = ?, where doctor_id = ?");
+        $stmt = $conn->prepare("update `doctor` set `doctor_name` = ?, `clinic_name` = ? where doctor_id = ?");
         $stmt->bind_param("ssi",$pName, $dcName, $did);
         $success = $stmt->execute();
         $conn->close();
