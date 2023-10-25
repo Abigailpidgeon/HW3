@@ -16,7 +16,7 @@ function insertAppointments($did,$pid,$ppatid,$aroom,$adaytime) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `appointment` (`did`,`pid`,`ppatid`,`room`, `day_time`) VALUES (?,?,?,?,?)");
-        $stmt->bind_param("sssss",$did,$pid,$ppatid,$aroom,$adaytime);
+        $stmt->bind_param("iisss",$did,$pid,$ppatid,$aroom,$adaytime);
         $success = $stmt->execute();
         $conn->close();
         return $success;
