@@ -28,7 +28,7 @@ function insertAppointments($aroom, $adaytime) {
 function updateAppointments($aroom, $adaytime, $aid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `appointment` set `room` = ?, `day_time` = ?, where appointment_id = ?");
+        $stmt = $conn->prepare("update `appointment` set `room` = ?, `day_time` = ? where appointment_id = ?");
         $stmt->bind_param("ssi",$aroom, $adaytime, $aid);
         $success = $stmt->execute();
         $conn->close();
