@@ -8,8 +8,22 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
 switch ($_POST['actionType']){
   case "Add":
-    if (insertProcedures($_POST['dName'],$_POST['dcName'])){
-      echo '<div class="alert alert-success" role="alert"> Procedure added!</div>';
+    if (insertDoctors($_POST['dName'],$_POST['dcName'])){
+      echo '<div class="alert alert-success" role="alert"> Doctor added!</div>';
+        }else{
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>';
+        }
+  break;
+  case "Edit":
+    if (updateDoctors($_POST['dName'],$_POST['dcName'],$_POST['did'])){
+      echo '<div class="alert alert-success" role="alert"> Doctor updated!</div>';
+        }else{
+     echo  '<div class="alert alert-danger" role="alert">Error....</div>';
+        }
+  break;
+  case "Delete":
+    if (deleteDoctors($_POST['did'])){
+      echo '<div class="alert alert-success" role="alert"> Doctor deleted!</div>';
         }else{
      echo  '<div class="alert alert-danger" role="alert">Error....</div>';
         }
