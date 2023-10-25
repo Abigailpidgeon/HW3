@@ -17,7 +17,6 @@
     <th>Insurance</th>
           <th></th>
           <th></th>
-          <th></th>
     </tr>
     </thead>
   <tbody>
@@ -29,6 +28,7 @@ while ($patient = $patients->fetch_assoc())
     <td><?php echo $patient['patient_id']; ?></td>
     <td><?php echo $patient['patient_name']; ?></td>
     <td><?php echo $patient['insurance_name']; ?></td>
+    <td>
    <?php
     include "view-patients-editform.php";
   ?>
