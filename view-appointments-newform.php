@@ -16,13 +16,25 @@
       </div>
       <div class="modal-body">
   <form method = "post" action="">
+   <div class="mb-3">
+      <label for="did" class="form-label">Doctor ID</label>
+      <input type="text" class="form-control" id="did" name = "did">
+    </div>
+   <div class="mb-3">
+      <label for="pid" class="form-label">Procedure ID</label>
+      <input type="text" class="form-control" id="pid" name = "pid">
+    </div>
+   <div class="mb-3">
+      <label for="ppatid" class="form-label">Patient ID</label>
+      <input type="text" class="form-control" id="ppatid" name = "ppatid">
+    </div>
     <div class="mb-3">
       <label for="aroom" class="form-label">Appointment Room</label>
       <input type="text" class="form-control" id="aroom" name ="aroom">
     </div>
     <div class="mb-3">
       <label for="adaytime" class="form-label">Appointment date and time</label>
-      <input type="datetime-local" class="form-control" id="adaytime" name = "adaytime">
+      <input type="text" class="form-control" id="adaytime" name = "adaytime">
     </div>
    <input type = "hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
