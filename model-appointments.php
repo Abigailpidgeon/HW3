@@ -25,11 +25,11 @@ function insertAppointments($did,$pid,$ppatid,$aroom,$adaytime) {
         throw $e;
     }
 }
-function updateAppointments($aroom, $adaytime, $aid) {
+function updateAppointments($did,$pid,$ppatid,$aroom, $adaytime, $aid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `appointment` set `room` = ?, `day_time` = ? where appointment_id = ?");
-        $stmt->bind_param("ssi",$aroom, $adaytime, $aid);
+        $stmt = $conn->prepare("update `appointment` set `doctor_id`=?,`procedure_id`=?, `patient _id`=?,`room` = ?, `day_time` = ? where appointment_id = ?");
+        $stmt->bind_param("ssi",$did,$pid,$ppatid,$aroom, $adaytime, $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
