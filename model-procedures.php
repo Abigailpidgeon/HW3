@@ -28,7 +28,7 @@ function insertProcedures($pName, $pDesc) {
 function updateProcedures($pName, $pDesc, $pid) {
    try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `procedure` set `procedure_name` = ?, `procedure_desc` = ?, where procedure_id = ?");
+        $stmt = $conn->prepare("update `procedure` set `procedure_name` = ?, `procedure_desc` = ? where procedure_id = ?");
         $stmt->bind_param("ssi",$pName, $pDesc, $pid);
         $success = $stmt->execute();
         $conn->close();
