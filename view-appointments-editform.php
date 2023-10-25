@@ -17,6 +17,18 @@
       <div class="modal-body">
   <form method = "post" action="">
     <div class="mb-3">
+     <div class="mb-3">
+      <label for="did<?php echo $appointment['appointment_id']; ?>" class="form-label">Doctor ID</label>
+     <input type="text" class="form-control" id="did<?php echo $appointment['appointment_id']; ?>" name = "did" value="<?php echo $appointment['doctor_id']; ?>">
+   </div>
+     <div class="mb-3">
+      <label for="pid<?php echo $appointment['appointment_id']; ?>" class="form-label">Procedure ID</label>
+     <input type="text" class="form-control" id="pid<?php echo $appointment['appointment_id']; ?>" name = "pid" value="<?php echo $appointment['procedure_id']; ?>">
+   </div>
+     <div class="mb-3">
+      <label for="ppatid<?php echo $appointment['appointment_id']; ?>" class="form-label">Patient ID</label>
+     <input type="text" class="form-control" id="ppatid<?php echo $appointment['appointment_id']; ?>" name = "ppatid" value="<?php echo $appointment['patient_id']; ?>">
+   </div>
       <label for="aroom<?php echo $appointment['appointment_id']; ?>" class="form-label">Appointment room</label>
       <input type="text" class="form-control" id="aroom<?php echo $appointment['appointment_id']; ?>" name ="aroom" value="<?php echo $appointment['room']; ?>">
     </div>
