@@ -25,11 +25,17 @@ include "view-doctor-input-list.php";
     </div>
    <div class="mb-3">
       <label for="pid" class="form-label">Procedure ID</label>
-      <input type="text" class="form-control" id="pid" name = "pid">
+<?php
+$doctorlist = selectProceduresForInput();
+include "view-procedure-input-list.php";
+?>
     </div>
    <div class="mb-3">
       <label for="ppatid" class="form-label">Patient ID</label>
-      <input type="text" class="form-control" id="ppatid" name = "ppatid">
+      <?php
+$doctorlist = selectPatientsForInput();
+include "view-patient-input-list.php";
+?>
     </div>
     <div class="mb-3">
       <label for="aroom" class="form-label">Appointment Room</label>
