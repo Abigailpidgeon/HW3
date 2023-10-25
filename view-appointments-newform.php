@@ -26,14 +26,14 @@ include "view-doctor-input-list.php";
    <div class="mb-3">
       <label for="pid" class="form-label">Procedure ID</label>
 <?php
-$doctorlist = selectProceduresForInput();
+$procedurelist = selectProceduresForInput();
 include "view-procedure-input-list.php";
 ?>
     </div>
    <div class="mb-3">
       <label for="ppatid" class="form-label">Patient ID</label>
       <?php
-$doctorlist = selectPatientsForInput();
+$patientlist = selectPatientsForInput();
 include "view-patient-input-list.php";
 ?>
     </div>
